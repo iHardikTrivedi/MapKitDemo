@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-aI-DXV">
+                                <rect key="frame" x="0.0" y="71" width="320" height="529"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-Ag-W9b">
+                                <rect key="frame" x="0.0" y="28" width="106" height="30"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.83921568629999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4wV-xV-sUh"/>
+                                </constraints>
+                                <state key="normal" title="Standard">
+                                    <color key="titleColor" red="0.1176470588" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnStandardTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="M7M-5y-FEh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWb-DX-Sqv">
+                                <rect key="frame" x="107" y="28" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Skx-D6-3vu"/>
+                                </constraints>
+                                <state key="normal" title="Satellite">
+                                    <color key="titleColor" red="0.1176470588" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSatelliteTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MKG-90-duR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtZ-8t-cX7">
+                                <rect key="frame" x="214" y="28" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vCH-hm-Kgg"/>
+                                </constraints>
+                                <state key="normal" title="Hybrid">
+                                    <color key="titleColor" red="0.1176470588" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnHybridTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ti9-md-4Yg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bWJ-aI-DXV" secondAttribute="trailing" constant="-16" id="4Zk-FK-afA"/>
+                            <constraint firstItem="EtZ-8t-cX7" firstAttribute="leading" secondItem="fWb-DX-Sqv" secondAttribute="trailing" constant="1" id="OCU-In-utX"/>
+                            <constraint firstItem="bWJ-aI-DXV" firstAttribute="top" secondItem="EtZ-8t-cX7" secondAttribute="bottom" constant="13" id="YCO-Rg-DAD"/>
+                            <constraint firstItem="EtZ-8t-cX7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="YLh-3S-lKV"/>
+                            <constraint firstItem="fWb-DX-Sqv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="YNu-qx-Xge"/>
+                            <constraint firstItem="n7D-Ag-W9b" firstAttribute="width" secondItem="fWb-DX-Sqv" secondAttribute="width" id="ZbO-oO-m6z"/>
+                            <constraint firstItem="n7D-Ag-W9b" firstAttribute="width" secondItem="EtZ-8t-cX7" secondAttribute="width" id="iPd-p7-mAP"/>
+                            <constraint firstItem="n7D-Ag-W9b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="sTV-NU-sjG"/>
+                            <constraint firstItem="n7D-Ag-W9b" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="tRa-eu-KWN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EtZ-8t-cX7" secondAttribute="trailing" constant="-16" id="v89-qL-53k"/>
+                            <constraint firstItem="fWb-DX-Sqv" firstAttribute="leading" secondItem="n7D-Ag-W9b" secondAttribute="trailing" constant="1" id="wRU-0H-N10"/>
+                            <constraint firstItem="bWJ-aI-DXV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="xSd-gj-Tce"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="bWJ-aI-DXV" secondAttribute="bottom" constant="-32" id="xbe-sV-xlT"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btnHybrid" destination="EtZ-8t-cX7" id="Zxe-Zl-yA0"/>
+                        <outlet property="btnSatellite" destination="fWb-DX-Sqv" id="aN9-S7-6oF"/>
+                        <outlet property="btnStandard" destination="n7D-Ag-W9b" id="gMX-eE-olI"/>
+                        <outlet property="objMapView" destination="bWJ-aI-DXV" id="oS0-Ox-hu3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
